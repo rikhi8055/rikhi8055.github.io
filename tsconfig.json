@@ -5,9 +5,10 @@
   "compilerOptions": {
     // to enable feature => import from "src/path.js"
     "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
-    }
+    // You can use below paths also - but not required as we can import as "/src/../.."
+    // "paths": {
+    //   "@components/*": ["src/components/*"],
+    //   "@assets/*": ["src/assets/*"]
+    // }
   }
 }

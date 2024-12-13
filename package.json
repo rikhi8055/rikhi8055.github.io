@@ -1,9 +1,10 @@
 {
-  "name": "",
+  "name": "rikhi8055.github.io",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
+    "start": "npm run dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"

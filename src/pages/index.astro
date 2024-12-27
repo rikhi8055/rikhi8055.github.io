@@ -1,10 +1,2531 @@
 ---
+import SampleModal from "src/components/modals/SampleModal.astro";
+import CookieBanner from "src/components/other/CookieBanner.astro";
 import Layout from "src/layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "ThinkAiStudio.com | By Nitish Kumar Rikhi";
+const description =
+  "ThinkAiStudio: Expert UI/UX design services for startups and growing brands. From UX research and wireframing to prototyping, usability testing, and graphic design, we craft user-centered digital experiences that drive results and growth.";
 ---
 
-<Layout>
-  <h1>Welcome to ThinkAiStudio.com</h1>
+<Layout title={title} description={description}>
+  <!-- navigation -->
+  <header
+    id="mainNav"
+    class="header shadow"
+    itemscope
+    itemtype="https://schema.org/WebSite"
+  >
+    <nav
+      class="navbar mt-3 rounded-20 container navbar-expand-lg fixed-top p-2"
+      aria-label="Main Navigation"
+      itemscope
+      itemtype="https://schema.org/SiteNavigationElement"
+    >
+      <div class="container">
+        <a
+          title="main logo"
+          href="index.html"
+          class="navbar-brand"
+          itemprop="url"
+        >
+          <img
+            width="40"
+            alt="UI Forge logo - Expert UX/UI Design Studio"
+            src="assets/img/template/logo.svg"
+            itemprop="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample09"
+          aria-controls="navbarsExample09"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <menu class="navbar-nav me-auto mt-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="index.html#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu pb-0" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/ux-ui-design-services.html"
+                    itemprop="url">UX/UI design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/custom-web-design-development.html"
+                    itemprop="url">Web design and development</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/branding-and-visual-identity.html"
+                    itemprop="url">Branding & identity</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/mobile-app-design.html"
+                    itemprop="url">Mobile design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/no-code-web-development.html"
+                    itemprop="url">No code web development</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/motion-design-animation.html"
+                    itemprop="url">Motion design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/illustrations.html"
+                    itemprop="url">Illustrations</a
+                  >
+                </li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services/iconography-icon-design.html"
+                    itemprop="url">Icons</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    title="Services nav link"
+                    class="dropdown-item"
+                    href="https://www.uiforge.design/services.html"
+                    itemprop="url">All services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                title="Case Studies nav link"
+                class="nav-link"
+                href="index.html#case-studies"
+                itemprop="url">Case Studies</a
+              >
+            </li>
+            <li>
+              <a
+                title="Pricing nav link"
+                class="nav-link"
+                href="https://www.uiforge.design/pricing.html"
+                itemprop="url">Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                title="About nav link"
+                class="nav-link"
+                href="https://www.uiforge.design/about.html"
+                itemprop="url">About</a
+              >
+            </li>
+          </menu>
+          <div class="d-md-flex d-sm-grid bd-highlight">
+            <div
+              class="head-available me-0 me-md-3 mb-3 mb-md-0 rounded-10 ps-1 pe-3 py-1 flex-fill bd-highlight d-none d-md-flex"
+            >
+              <div class="head-conteiner">
+                <img
+                  class="rounded-6 me-2"
+                  alt="Dejan Veljanoski - UX/UI Designer and Founder of UI Forge"
+                  width="30"
+                  src="assets/img/template/me_black.webp"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                >
+                  <path
+                    d="M5.5 10C7.98528 10 10 7.98528 10 5.5C10 3.01472 7.98528 1 5.5 1C3.01472 1 1 3.01472 1 5.5C1 7.98528 3.01472 10 5.5 10Z"
+                    fill="#18B946"
+                    stroke="#F0F0F0"
+                    stroke-width="2"></path>
+                </svg>
+              </div>
+              <span>Available for work</span>
+            </div>
+            <a
+              href="https://www.uiforge.design/book-a-call.html"
+              title="Lets talk button"
+              class="btn btn-primary btn-sm px-3 py-1 flex-fill bd-highlight d-none d-md-flex"
+              itemprop="url"
+              >Book a call
+              <svg
+                class="ms-1"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 18 18"
+                style="width: 18px"
+                xml:space="preserve"
+              >
+                <style type="text/css">
+                  .st0 {
+                    fill: #cfe2ff;
+                  }
+                  .st1 {
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    fill: #448ffe;
+                  }
+                </style>
+                <g>
+                  <path
+                    class="st0"
+                    d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"
+                  ></path>
+                  <path
+                    class="st1"
+                    d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+                               c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section
+    class="interactive-header border-sm-0"
+    itemscope
+    itemtype="https://schema.org/WebPageElement"
+  >
+    <div class="header-hero text-center px-4">
+      <!-- <p class="accent-text" itemprop="description">Welcome to UI Forge</p> -->
+      <p
+        class="accent-text text-center mb-0 mt-5 mt-md-0"
+        itemprop="description"
+      >
+        Welcome to UI forge
+      </p>
+      <h1 itemprop="headline">
+        UI/UX Design partner <br />for growing businesses
+      </h1>
+      <div class="col-lg-12 mx-auto px-0 px-md-4 px-sm-5">
+        <p class="mb-4 display-8" itemprop="description">
+          Partner with a senior designer to launch, grow, and scale your
+          projects faster.<br />
+          Enjoy full-time dedication without the cost of onboarding
+        </p>
+        <div
+          class="d-grid d-sm-flex justify-content-sm-center mb-5 pb-0 pb-md-5"
+        >
+          <a
+            href="https://www.uiforge.design/book-a-call.html"
+            title="Book call on my calendar"
+            class="btn btn-primary btn-lg ps-4 pe-4 py-2 my-2 d-flex me-0 me-md-3"
+            itemprop="url"
+            >Free consultation
+            <svg
+              class="ms-1"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 18 18"
+              style="width: 18px"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #cfe2ff;
+                }
+                .st1 {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  fill: #448ffe;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"
+                ></path>
+                <path
+                  class="st1"
+                  d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+                         c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <div class="d-none d-md-block">
+            <SampleModal />
+          </div>
+        </div>
+
+        <div class="container-lg pb-5 mb-5 d-block d-md-none">
+          <div class="row row-cols-1 row-cols-lg-3 g-4">
+            <!-- First Column -->
+            <div class="col p-0 mt-0 animated">
+              <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                  <div
+                    class="col mt-5 ms-auto p-0"
+                    itemscope
+                    itemtype="http://schema.org/CreativeWork"
+                  >
+                    <img
+                      class="w-100 rounded-10 shadow card-animation header-images"
+                      src="assets/img/portfolio/logo/img-alchemist.webp"
+                      alt="Alchemist logo design created by Dejan Veljanoski showcasing modern branding for Design Alchemists"
+                      itemprop="image"
+                    />
+                    <p
+                      class="mb-1 mt-2 muted-50 display-10 text-start"
+                      itemprop="name"
+                    >
+                      Logo design - Design alchemists
+                    </p>
+                    <meta
+                      itemprop="description"
+                      content="A sleek logo designed for Design Alchemists."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div
+                  class="pt-4"
+                  itemscope
+                  itemtype="http://schema.org/CreativeWork"
+                >
+                  <img
+                    class="w-100 rounded-10 shadow card-animation header-images"
+                    src="assets/img/portfolio/img-testify.webp"
+                    alt="Testify landing page design for an AI testing app, featuring a user-friendly layout and modern visuals"
+                    itemprop="image"
+                  />
+                  <p
+                    class="mb-1 mt-2 muted-50 display-10 text-start"
+                    itemprop="name"
+                  >
+                    Web design - Testify
+                  </p>
+                  <meta
+                    itemprop="description"
+                    content="Landing page design for Testify."
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div
+                  class="pt-4"
+                  itemscope
+                  itemtype="http://schema.org/CreativeWork"
+                >
+                  <img
+                    class="w-100 rounded-10 shadow card-animation header-images"
+                    src="assets/img/portfolio/img-slide-booking.webp"
+                    alt="Booking app design showcasing intuitive navigation and seamless user experience for scheduling and reservations."
+                    itemprop="image"
+                  />
+                  <p
+                    class="mb-1 mt-2 muted-50 display-10 text-start"
+                    itemprop="name"
+                  >
+                    Journey Jolt - Concept design
+                  </p>
+                  <meta
+                    itemprop="description"
+                    content="Concept design for Journey Jolt booking app."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Column -->
+            <div
+              class="col animated d-none d-md-block"
+              itemscope
+              itemtype="http://schema.org/CreativeWork"
+            >
+              <img
+                class="w-100 rounded-20 shadow card-animation header-images"
+                src="assets/img/portfolio/img-mobile.webp"
+                alt="Mobile app design for rent electric cars, featuring a sleek and creative user interface."
+                itemprop="image"
+              />
+              <p
+                class="mb-1 mt-2 muted-50 display-10 text-start"
+                itemprop="name"
+              >
+                Mobile app - Green ride
+              </p>
+              <meta
+                itemprop="description"
+                content="Mobile app design for Green ride."
+              />
+            </div>
+
+            <!-- Third Column -->
+            <div class="col p-0 animated mt-0 mt-md-5">
+              <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                  <div
+                    class="col mt-5 me-auto p-0"
+                    itemscope
+                    itemtype="http://schema.org/CreativeWork"
+                  >
+                    <img
+                      class="w-100 rounded-10 shadow card-animation header-images"
+                      src="assets/img/portfolio/logo/img-rca.webp"
+                      alt="Final logo design for RCA, an app specializing in collecting vibration data from machines to detect problems, with full branding by UI Forge."
+                      itemprop="image"
+                    />
+                    <p
+                      class="mb-1 mt-2 muted-50 display-10 text-start"
+                      itemprop="name"
+                    >
+                      Branding - RCA Cloud
+                    </p>
+                    <meta
+                      itemprop="description"
+                      content="Branding design for RCA Cloud."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div
+                  class="pt-4"
+                  itemscope
+                  itemtype="http://schema.org/CreativeWork"
+                >
+                  <img
+                    class="w-100 rounded-10 shadow card-animation header-images"
+                    src="assets/img/portfolio/img-slide-tech.webp"
+                    alt="UX/UI design for a collaboration dashboard app, showcasing intuitive navigation and streamlined team workflows."
+                    itemprop="image"
+                  />
+                  <p
+                    class="mb-1 mt-2 muted-50 display-10 text-start"
+                    itemprop="name"
+                  >
+                    SaaS app - Tech Collab
+                  </p>
+                  <meta
+                    itemprop="description"
+                    content="SaaS app design for Tech Collab."
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div
+                  class="pt-4"
+                  itemscope
+                  itemtype="http://schema.org/CreativeWork"
+                >
+                  <img
+                    class="w-100 rounded-10 shadow card-animation header-images"
+                    src="assets/img/portfolio/img-bank.webp"
+                    alt="UX/UI design for an online banking dashboard app, highlighting secure transactions, user-friendly interface, and financial management tools."
+                    itemprop="image"
+                  />
+                  <p
+                    class="mb-1 mt-2 muted-50 display-10 text-start"
+                    itemprop="name"
+                  >
+                    Dashboard - Concept
+                  </p>
+                  <meta
+                    itemprop="description"
+                    content="Concept dashboard design for a banking application."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="portfolio-slider pb-5 d-none d-md-block"
+          itemscope
+          itemtype="http://schema.org/ItemList"
+        >
+          <meta itemprop="name" content="Other projects we've done" />
+          <meta
+            itemprop="description"
+            content="Explore our successful projects and see the impactful results we've delivered for our clients."
+          />
+          <div class="slider-container">
+            <!-- Individual items should have itemListElement wrapping -->
+            <div class="slider py-4">
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Banking dashboard design showcasing streamlined financial management interface"
+                  width="400"
+                  src="assets/img/portfolio/img-bank.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  style="width: 173px"
+                  loading="lazy"
+                  alt="Bill Organizer & Tracker ios mobile app design emphasizing responsive and intuitive user interfaces"
+                  width="173"
+                  src="assets/img/portfolio/img-mobile-bill-organizer.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Vib.cloud web design for industrial vibration data collection and analysis platform"
+                  width="400"
+                  src="assets/img/portfolio/vibcloud/img-cover.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Green Ride app design showcasing electric vehicle rental platform"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-greenride.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="AI-based QA testing app web design focusing on reliability and efficiency"
+                  width="400"
+                  src="assets/img/portfolio/img-testify.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Atlas Health app web design for back pain management and relief"
+                  width="400"
+                  src="assets/img/portfolio/img-portfolio-atlas.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Booking app user interface design featuring seamless trip planning functionality"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-booking.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  style="width: 173px"
+                  loading="lazy"
+                  alt="Mobile app design emphasizing responsive and intuitive user interfaces"
+                  width="173"
+                  src="assets/img/portfolio/img-mobile.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="TruckWise app design for logistics and fleet management"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-truck-wise.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Vib.cloud dashboard showcasing real-time vibration data analysis"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-vib.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="Collaborative development app web design with a sleek and functional interface"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-tech.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="FanFlick online video streaming platform design emphasizing content discovery"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-fanflick.webp"
+                  itemprop="image"
+                />
+              </div>
+              <div
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/CreativeWork"
+              >
+                <img
+                  loading="lazy"
+                  alt="JamJunction online music maker app design for creative collaboration"
+                  width="400"
+                  src="assets/img/portfolio/img-slide-jamjunction.webp"
+                  itemprop="image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div
+    class="clients position-relative d-none d-md-block"
+    itemscope
+    itemtype="http://schema.org/Organization"
+  >
+    <meta itemprop="name" content="UI Forge" />
+    <img
+      class="logo-bridge"
+      src="assets/img/portfolio/img-bridge.svg"
+      alt="Bridge logo"
+    />
+    <div class="logo-container">
+      <div class="logos">
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Go3PL client logo"
+            width="130"
+            src="assets/img/portfolio/logo-go3pl.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jam Junction client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jamjunction.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jorney Jolt client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jorneyjolt.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Skillsprint client logo"
+            width="130"
+            src="assets/img/portfolio/logo-skillsprint.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Truckwise client logo"
+            width="130"
+            src="assets/img/portfolio/logo-truckwise.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Wellconnect client logo"
+            width="130"
+            src="assets/img/portfolio/logo-wellconnect.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="RCA Cloud client logo"
+            width="130"
+            src="assets/img/portfolio/logo-rcacloud.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Alchemists client logo"
+            width="130"
+            src="assets/img/portfolio/logo-alchemists.svg"
+          />
+        </div>
+        <!-- Repeat the logos for smooth scrolling -->
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Go3PL client logo"
+            width="130"
+            src="assets/img/portfolio/logo-go3pl.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jam Junction client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jamjunction.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jorney Jolt client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jorneyjolt.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Skillsprint client logo"
+            width="130"
+            src="assets/img/portfolio/logo-skillsprint.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Truckwise client logo"
+            width="130"
+            src="assets/img/portfolio/logo-truckwise.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Wellconnect client logo"
+            width="130"
+            src="assets/img/portfolio/logo-wellconnect.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="RCA Cloud client logo"
+            width="130"
+            src="assets/img/portfolio/logo-rcacloud.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Alchemists client logo"
+            width="130"
+            src="assets/img/portfolio/logo-alchemists.svg"
+          />
+        </div>
+        <!-- Repeat the logos for smooth scrolling -->
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Go3PL client logo"
+            width="130"
+            src="assets/img/portfolio/logo-go3pl.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jam Junction client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jamjunction.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Jorney Jolt client logo"
+            width="130"
+            src="assets/img/portfolio/logo-jorneyjolt.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Skillsprint client logo"
+            width="130"
+            src="assets/img/portfolio/logo-skillsprint.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Truckwise client logo"
+            width="130"
+            src="assets/img/portfolio/logo-truckwise.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Wellconnect client logo"
+            width="130"
+            src="assets/img/portfolio/logo-wellconnect.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="RCA Cloud client logo"
+            width="130"
+            src="assets/img/portfolio/logo-rcacloud.svg"
+          />
+        </div>
+        <div
+          itemprop="department"
+          itemscope
+          itemtype="http://schema.org/Organization"
+        >
+          <img
+            loading="lazy"
+            itemprop="logo"
+            alt="Alchemists client logo"
+            width="130"
+            src="assets/img/portfolio/logo-alchemists.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section
+    class="intro d-none d-md-block container-lg pb-2 pt-5 position-relative border-sm-0"
+    itemscope
+    itemtype="http://schema.org/Service"
+  >
+    <h2 class="text-center w-100 mb-2" itemprop="name">
+      How can we support you
+    </h2>
+    <p class="mb-5 display-8 text-center w-100" itemprop="description">
+      Explore the diverse range of design services we offer to elevate your
+      brand and products
+    </p>
+    <div class="container-lg pt-4 pb-3">
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
+        <div
+          class="col animated"
+          itemscope
+          itemtype="http://schema.org/Service"
+        >
+          <div class="card h-100 p-1">
+            <div class="card-img pt-3 px-2">
+              <object
+                title="Product design animation"
+                data="assets/img/template/img-produc-design.svg"
+                type="image/svg+xml"></object>
+            </div>
+            <div class="card-body p-4 pt-3">
+              <h3 class="card-title pb-0 fw-normal h4" itemprop="name">
+                UX/UI Design
+              </h3>
+              <p class="card-text" itemprop="description">
+                Creating intuitive and user-friendly interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col animated"
+          itemscope
+          itemtype="http://schema.org/Service"
+        >
+          <div class="card h-100 p-1">
+            <div class="card-img pt-3 px-2">
+              <object
+                title="Web design animation"
+                data="assets/img/template/img-web-design.svg"
+                type="image/svg+xml"></object>
+            </div>
+            <div class="card-body p-4 pt-3">
+              <h3 class="card-title pb-0 fw-normal h4" itemprop="name">
+                Web Design & Development
+              </h3>
+              <p class="card-text" itemprop="description">
+                Creating intuitive and user-friendly interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col animated"
+          itemscope
+          itemtype="http://schema.org/Service"
+        >
+          <div class="card h-100 p-1">
+            <div class="card-img pt-3 px-2">
+              <object
+                title="Branding animation"
+                data="assets/img/template/img-branding.svg"
+                type="image/svg+xml"></object>
+            </div>
+            <div class="card-body p-4 pt-3">
+              <h3 class="card-title pb-0 fw-normal h4" itemprop="name">
+                Branding
+              </h3>
+              <p class="card-text" itemprop="description">
+                Building strong and cohesive brand identities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="why-us container-lg py-0 py-md-5"
+    itemscope
+    itemtype="http://schema.org/Service"
+  >
+    <meta itemprop="name" content="UI Forge Design Services" />
+    <div class="container-lg pt-2 pt-xs-5 animated">
+      <div class="row row-cols-1 row-cols-lg-3">
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="Layer"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-layers.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Unlimited design requests
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Request unlimited design revisions and new<br
+              class="d-md-block d-none"
+            />
+            projects to fully realize your vision.
+          </p>
+        </div>
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="Lighting"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-lighting.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Priority turnaround time
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Receive faster delivery with priority handling<br
+              class="d-md-block d-none"
+            />
+            for all your projects.
+          </p>
+        </div>
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="User"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-user.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Dedicated designer
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Work with a dedicated senior designer who<br
+              class="d-md-block d-none"
+            />
+            knows your brand and goals.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-lg pb-2 pb-xs-5 animated">
+      <div class="row row-cols-1 row-cols-lg-3 pb-5">
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="Design"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-design.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Comprehensive design solutions
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Access a full range of design services<br
+              class="d-md-block d-none"
+            />
+            for cohesive branding.
+          </p>
+        </div>
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="Cost"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-cost.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Cost-effective pricing
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Save significantly compared to hiring full-time<br
+              class="d-md-block d-none"
+            />
+            designers with our affordable
+            <a
+              title="pricing page"
+              class="text-white fw-bold"
+              href="https://www.uiforge.design/pricing.html"
+              >subscription plan.</a
+            >
+          </p>
+        </div>
+        <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+          <object
+            title="Strategy"
+            class="mb-2"
+            width="36"
+            data="assets/img/template/ic-strategy.svg"
+            type="image/svg+xml"></object>
+          <h3
+            class="card-title pb-2 fw-normal text-white h4"
+            itemprop="serviceType"
+          >
+            Regular strategy sessions
+          </h3>
+          <p class="card-text text-white muted-50" itemprop="description">
+            Align your design projects with business<br
+              class="d-md-block d-none"
+            />
+            goals through regular strategy sessions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="projects"
+    class="latest-projects position-relative"
+    itemscope
+    itemtype="http://schema.org/CreativeWork"
+  >
+    <div class="container-lg pb-3 pt-5 py-5 w-60">
+      <p class="accent-text text-center mb-0" itemprop="description">
+        Recent designs
+      </p>
+      <h2 class="text-center w-100 mb-5" itemprop="headline">
+        Partnering for success
+      </h2>
+      <div class="container pb-2">
+        <div
+          class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation"
+        >
+          <!-- Image Column -->
+          <div
+            class="col mt-0"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="h-100 rounded-corners-20">
+              <img
+                src="assets/img/portfolio/img-slide-truck-wise.webp"
+                class="w-100 rounded-10"
+                alt="UX/UI design for TruckWise, an app for planning, organizing, and tracking truck logistics efficiently."
+              />
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div
+            class="col mt-0 d-flex p-3 flex-column"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="flex-grow-1">
+              <img
+                class="mb-4"
+                width="150"
+                alt="client logo"
+                src="assets/img/portfolio/logo-truckwise-dark.svg"
+              />
+              <h3 class="card-title h4">
+                Designed Truckwise for usability and performance.
+              </h3>
+            </div>
+            <!-- KEY FEATURES at the bottom -->
+            <div class="mt-auto">
+              <p class="mb-1 muted-50 display-10">KEY FEATURES:</p>
+              <ul class="ps-0 mb-0">
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  SAS
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Dashboard
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Tracking
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Organising
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UX</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation"
+        >
+          <!-- Text Column -->
+          <div
+            class="col mt-0 d-flex p-4 ps-4 flex-column"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="flex-grow-1">
+              <img
+                class="mb-4"
+                width="150"
+                alt="client logo"
+                src="assets/img/portfolio/logo-pixyle.svg"
+              />
+              <h3 class="card-title h4">
+                Multiple design projects for pixyle.ai
+              </h3>
+            </div>
+            <!-- KEY FEATURES at the bottom -->
+            <div class="mt-auto">
+              <p class="mb-1 muted-50 display-10">KEY FEATURES:</p>
+              <ul class="ps-0 mb-0">
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UX</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UI</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Graphic
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Webflow
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">AI</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Prototyping
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div
+            class="col mt-0"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="h-100 rounded-corners-20">
+              <img
+                src="assets/img/portfolio/img-portfolio-pixyle.webp"
+                class="w-100 rounded-10"
+                alt="Landing page design for Pixyle AI, an app that generates image tags using artificial intelligence."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation"
+        >
+          <!-- Image Column -->
+          <div
+            class="col mt-0"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="h-100 rounded-corners-20">
+              <img
+                src="assets/img/portfolio/img-branding.webp"
+                class="w-100 rounded-10"
+                alt="Tech app"
+              />
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div
+            class="col mt-0 d-flex p-3 flex-column"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="flex-grow-1">
+              <img
+                class="mb-4"
+                width="150"
+                alt="Logo design for GO3PL, a storage and logistics company, showcasing modern branding elements."
+                src="assets/img/portfolio/logo-go3pl-dark.svg"
+              />
+              <h3 class="card-title h4">
+                Comprehensive branding for a warehouse company.
+              </h3>
+            </div>
+            <!-- KEY FEATURES at the bottom -->
+            <div class="mt-auto">
+              <p class="mb-1 muted-50 display-10">KEY FEATURES:</p>
+              <ul class="ps-0 mb-0">
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Branding
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Logo
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Color
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Graphics
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation"
+        >
+          <!-- Text Column -->
+          <div
+            class="col mt-0 d-flex p-4 ps-4 flex-column"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="flex-grow-1">
+              <h3 class="card-title h4">
+                UI/UX design for a mobile app for a car rental startup.
+              </h3>
+            </div>
+            <!-- KEY FEATURES at the bottom -->
+            <div class="mt-auto">
+              <p class="mb-1 muted-50 display-10">KEY FEATURES:</p>
+              <ul class="ps-0 mb-0">
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Mobile app
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UX</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">UI</li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Prototyping
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Figma
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Android
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  iOS
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div
+            class="col mt-0"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="h-100 rounded-corners-20">
+              <img
+                src="assets/img/portfolio/img-slide-greenride.webp"
+                class="w-100 rounded-10"
+                alt="UX/UI design for GreenRide, an app dedicated to renting electric vehicles, featuring a clean and eco-friendly interface."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="tools-section"
+    itemscope
+    itemtype="https://schema.org/ItemList"
+  >
+    <div class="container tools-container">
+      <h3 class="accent-text text-white text-center mb-0" itemprop="name">
+        Tools we use
+      </h3>
+      <meta itemprop="itemListOrder" content="Unordered" />
+      <meta itemprop="numberOfItems" content="14" />
+
+      <!-- Tool 1: Bootstrap -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-bootstrap.svg"
+          alt="Bootstrap logo, a responsive framework for web development"
+          itemprop="image"
+        />
+        <span itemprop="name">Bootstrap</span>
+        <meta itemprop="operatingSystem" content="All" />
+        <meta itemprop="applicationCategory" content="Web development tool" />
+      </div>
+
+      <!-- Tool 2: Figma -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-figma.svg"
+          alt="Figma logo, a collaborative design and prototyping tool"
+          itemprop="image"
+        />
+        <span itemprop="name">Figma</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Design tool" />
+      </div>
+
+      <!-- Tool 3: Illustrator -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-illustrator.svg"
+          alt="Illustrator logo, a vector graphic design tool by Adobe"
+          itemprop="image"
+        />
+        <span itemprop="name">Illustrator</span>
+        <meta itemprop="operatingSystem" content="Windows, macOS" />
+        <meta itemprop="applicationCategory" content="Design tool" />
+      </div>
+
+      <!-- Tool 4: VS Code -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-vs.svg"
+          alt="VS Code logo, a lightweight code editor by Microsoft"
+          itemprop="image"
+        />
+        <span itemprop="name">VS Code</span>
+        <meta itemprop="operatingSystem" content="Windows, macOS, Linux" />
+        <meta itemprop="applicationCategory" content="Development tool" />
+      </div>
+
+      <!-- Tool 5: Office -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-office.svg"
+          alt="Microsoft Office logo, a suite of productivity tools"
+          itemprop="image"
+        />
+        <span itemprop="name">Office</span>
+        <meta itemprop="operatingSystem" content="Windows, macOS" />
+        <meta itemprop="applicationCategory" content="Productivity tool" />
+      </div>
+
+      <!-- Tool 6: Trello -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-trello.svg"
+          alt="Trello logo, a web-based project management tool"
+          itemprop="image"
+        />
+        <span itemprop="name">Trello</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta
+          itemprop="applicationCategory"
+          content="Project management tool"
+        />
+      </div>
+
+      <!-- Tool 7: Webflow -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-webflow.svg"
+          alt="Webflow logo, a no-code web design and development tool"
+          itemprop="image"
+        />
+        <span itemprop="name">Webflow</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Web design tool" />
+      </div>
+
+      <!-- Tool 8: Photoshop -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-ps.svg"
+          alt="Photoshop logo, a popular image editing tool by Adobe"
+          itemprop="image"
+        />
+        <span itemprop="name">Photoshop</span>
+        <meta itemprop="operatingSystem" content="Windows, macOS" />
+        <meta itemprop="applicationCategory" content="Design tool" />
+      </div>
+
+      <!-- Tool 9: Adobe XD -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-xd.svg"
+          alt="Adobe XD logo, a UI/UX design and prototyping tool"
+          itemprop="image"
+        />
+        <span itemprop="name">Adobe XD</span>
+        <meta itemprop="operatingSystem" content="Windows, macOS" />
+        <meta itemprop="applicationCategory" content="UI/UX design tool" />
+      </div>
+
+      <!-- Tool 10: Notion -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-notion.svg"
+          alt="Notion logo, a note-taking and collaboration platform"
+          itemprop="image"
+        />
+        <span itemprop="name">Notion</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Productivity tool" />
+      </div>
+
+      <!-- Tool 11: SVGAator -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-svgator.svg"
+          alt="SVGator logo, a tool for creating animated SVGs"
+          itemprop="image"
+        />
+        <span itemprop="name">SVGator</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Animation tool" />
+      </div>
+
+      <!-- Tool 12: Slack -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-slack.svg"
+          alt="Slack logo, a communication and collaboration tool"
+          itemprop="image"
+        />
+        <span itemprop="name">Slack</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Communication tool" />
+      </div>
+
+      <!-- Tool 13: ChatGPT -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-gpt.svg"
+          alt="ChatGPT logo, an AI-based conversational tool"
+          itemprop="image"
+        />
+        <span itemprop="name">ChatGPT</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="AI tool" />
+      </div>
+
+      <!-- Tool 14: GitHub -->
+      <div
+        class="tool-item d-flex gap-1"
+        itemscope
+        itemtype="https://schema.org/SoftwareApplication"
+      >
+        <img
+          loading="lazy"
+          class="me-1"
+          width="16"
+          src="assets/img/template/ic-git.svg"
+          alt="GitHub logo, a platform for version control and collaboration"
+          itemprop="image"
+        />
+        <span itemprop="name">GitHub</span>
+        <meta itemprop="operatingSystem" content="Web-based" />
+        <meta itemprop="applicationCategory" content="Version control tool" />
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="clients-testimonials pb-3 pt-5 py-5">
+    <p class="accent-text text-center mb-0">Testimonials</p>
+    <h2 class="text-center w-100 mb-2">Our long term partners</h2>
+    <p class="mb-5 display-8 text-center w-100">
+      Discover what our clients say about working with us.
+    </p>
+    <div class="container mt-3">
+      <div
+        class="d-flex justify-content-center py-3 gap-3 flex-column flex-md-row"
+      >
+        <div class="mr-2 d-flex gap-3 flex-column">
+          <!-- Review 1 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Dejan is an outstanding designer who excels at quickly developing
+              concepts and effectively incorporating feedback.
+              <b>His work consistently meets high standards of quality.</b> I wholeheartedly
+              recommend him!"
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-jeremy.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Jeremy Smith photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Jeremy Smith</h3>
+                <p class="mb-0">Founder, Seedlang</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Dejan is a very talented designer. He works quickly and has a
+              great eye for detail.
+              <b>His designs are always high-quality and look great.</b> Dejan is
+              patient, listens well, and makes changes fast. We highly recommend
+              him."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-atlas.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Tiffany Taylor photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Tiffany Taylor</h3>
+                <p class="mb-0">Co-Founder, Atlas Health</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Dejan is an exceptional designer whose creativity and efficiency
+              are truly remarkable.
+              <b
+                >His work is not only of the highest quality but also highly
+                innovative, consistently pushing the boundaries of design.</b
+              >
+              I cannot recommend Dejan highly enough."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-michelle.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Michelle photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Michelle</h3>
+                <p class="mb-0">CEO, Affordable Storage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mr-2 d-flex gap-3 flex-column">
+          <!-- Review 4 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Dejan and his studio provided exceptional Custom UX/UI Design
+              services at a cost-effective rate. He quickly grasped our vision
+              and delivered high-quality results on schedule.<b
+                >His creativity, attention to detail, and efficiency were
+                evident throughout the project.</b
+              >"
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-marija.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Maria photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Maria</h3>
+                <p class="mb-0">Founder, Order Architect</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "<b
+                >Dejan is fantastic to work with. He is very responsive,
+                respects deadlines, and has excellent design skills.</b
+              >
+              I look forward to working with him again! His attention to detail and
+              creativity consistently exceed expectations."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-paul.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Paul photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Paul</h3>
+                <p class="mb-0">Founder, Fitout Builder</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Dejan's work ethic and expertise have been invaluable to our
+              company.
+              <b
+                >His designs are not only aesthetically pleasing but also highly
+                functional.</b
+              >
+              He is a true professional and a pleasure to work with."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-lisa.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Lisa Wong photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Lisa Wong</h3>
+                <p class="mb-0">CTO, FutureVision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mr-2 d-flex gap-3 flex-column">
+          <!-- Review 7 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "Since 2023, we have had the privilege of working with Dejan.
+              <b
+                >His exceptional UX and design skills have made him an
+                indispensable member of our team.</b
+              >
+              His contributions have significantly enhanced our projects, and we
+              highly recommend his expertise to anyone seeking top-tier design services."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-svetlana.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Svetlana photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Svetlana Kordumova</h3>
+                <p class="mb-0">Founder, Pixyle</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 8 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "I had the pleasure of having Dejan as a chief design officer and
+              a trusted partner at iTnnovate. During that time, he rebranded our
+              company and worked hard on making our solutions more
+              user-friendly. He also implemented a work process that we still
+              use today. We've been collaborating for over 8 years, and I highly
+              recommend him!"
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-petar.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Petar Spaseski photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Petar Spaseski</h3>
+                <p class="mb-0">Founder, iTnnovate</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 9 -->
+          <div class="card p-4 animated">
+            <p class="maintxt">
+              "<b
+                >We have collaborated with Dejan for multiple projects and his
+                creativity and dedication are unmatched.</b
+              >
+              His ability to understand our needs and deliver exceptional designs
+              has greatly enhanced our product offerings."
+            </p>
+            <hr />
+            <div class="d-flex profile">
+              <img
+                loading="lazy"
+                src="assets/img/template/cl-antonio.webp"
+                width="50"
+                height="50"
+                class="rounded-circle"
+                alt="Mark Johnson photo"
+              />
+              <div class="px-3">
+                <h3 class="fw-normal mb-0 h4">Mark Johnson</h3>
+                <p class="mb-0">CEO, InnovateTech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="case-studies"
+    class="case-studies pt-5"
+    itemscope
+    itemtype="http://schema.org/CollectionPage"
+  >
+    <div class="container py-5 pb-2 pt-4 w-60">
+      <h2 class="text-center w-100 mb-2" itemprop="headline">Case studies</h2>
+      <p class="mb-5 display-8 text-center w-100" itemprop="description">
+        Explore our successful projects and see the impactful results we've
+        delivered for our clients.
+      </p>
+      <div class="row row-cols-1 row-cols-lg-2 g-4 pb-4 animated">
+        <a
+          title="Vib cloud link"
+          href="https://www.uiforge.design/case-studies/vib-cloud.html"
+          itemscope
+          itemtype="http://schema.org/CaseStudy"
+          itemprop="hasPart"
+        >
+          <div class="col">
+            <div class="card card-animation h-100 p-2 pb-0">
+              <img
+                loading="lazy"
+                class="radius-10"
+                src="assets/img/portfolio/vibcloud/img-cover.webp"
+                alt="Vib Cloud app case study cover image showcasing vibration data collection and analysis platform"
+                itemprop="image"
+              />
+              <div class="card-body px-2 d-flex">
+                <p class="card-text mb-0 me-auto" itemprop="name">Vib Cloud</p>
+                <p class="card-text mb-0">Read study ➞</p>
+                <meta itemprop="about" content="SAS Application" />
+              </div>
+            </div>
+          </div>
+        </a>
+        <a
+          title="Go green ai tagging"
+          href="https://www.uiforge.design/services.html"
+          itemscope
+          itemtype="http://schema.org/CaseStudy"
+          itemprop="hasPart"
+        >
+          <div class="col">
+            <div class="card card-animation h-100 p-2 pb-0">
+              <img
+                loading="lazy"
+                class="radius-10"
+                src="assets/img/portfolio/img-slide-greenride.webp"
+                alt="Green Ride electric vehicle rental app case study cover image showcasing modern app design"
+                itemprop="image"
+              />
+              <div class="card-body px-2 d-flex">
+                <p class="card-text mb-0 me-auto" itemprop="name">
+                  Coming soon
+                </p>
+                <p class="card-text mb-0">Mobile app design</p>
+                <meta itemprop="about" content="SAS Application" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="faq"
+    class="faq round-bottom-20 py-2 py-xs-5 position-relative"
+    itemscope
+    itemtype="http://schema.org/FAQPage"
+  >
+    <div class="text-left px-3 pt-5 container w-60">
+      <h2 class="pt-2 mb-0 text" itemprop="headline">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <div
+      id="accordionFlushExample"
+      class="accordion accordion-flush p-3 container w-60"
+    >
+      <!-- Question 1 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed fs-5 p-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            <span itemprop="name"
+              >Q: What design package is best for my needs?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >Our packages are tailored to fit various needs. Whether you
+              require a complete branding overhaul, a new website, or continuous
+              design support, we can recommend the best package based on your
+              goals and budget. Contact us for a personalized consultation.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            <span itemprop="name"
+              >Q: How much work will I receive in a single month?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >The amount of work depends on the package you choose. We offer
+              flexible plans that cater to different project scopes and
+              timelines, ensuring you get the quality and quantity of work
+              needed to achieve your objectives.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            <span itemprop="name"
+              >Q: Can I hire UI Forge to design for my agency?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >Yes, we collaborate with agencies to provide top-notch design
+              services. Whether you need extra hands on a specific project or
+              ongoing design support, we can seamlessly integrate with your team
+              to deliver outstanding results.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            <span itemprop="name"
+              >Q: How do I get started with UI Forge's design services?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >Getting started is easy! Simply reach out via our contact form,
+              email, or phone. We’ll discuss your needs, outline our process,
+              and provide a tailored proposal to kick off your project.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingFive">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive"
+            aria-expanded="false"
+            aria-controls="flush-collapseFive"
+          >
+            <span itemprop="name"
+              >Q: Why choose a subscription model over hiring a full-time
+              designer?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseFive"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFive"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >Our subscription model offers flexibility, cost savings, and
+              access to a diverse team of experts. You get high-quality design
+              work without the overhead costs of hiring full-time staff, along
+              with the ability to scale services up or down as needed.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingSix">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+          >
+            <span itemprop="name"
+              >Q: What industries does UI Forge typically work with?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseSix"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >While we excel in various industries, we have significant
+              experience in ecommerce, tech startups, and B2B services,
+              providing tailored solutions that meet specific industry needs.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 7 -->
+      <div
+        class="accordion-item rounded-20 white my-3 p-3 animated"
+        itemscope
+        itemprop="mainEntity"
+        itemtype="http://schema.org/Question"
+      >
+        <h3 class="accordion-header" id="flush-headingSeven">
+          <button
+            class="accordion-button collapsed fs-5 px-0 py-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven"
+            aria-expanded="false"
+            aria-controls="flush-collapseSeven"
+          >
+            <span itemprop="name"
+              >Q: Do you offer ongoing support after project completion?</span
+            >
+          </button>
+        </h3>
+        <div
+          id="flush-collapseSeven"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSeven"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div
+            class="accordion-body rounded-6"
+            itemprop="acceptedAnswer"
+            itemscope
+            itemtype="http://schema.org/Answer"
+          >
+            <span itemprop="text"
+              >Yes, we offer ongoing support and maintenance to ensure your
+              digital products remain up-to-date, secure, and fully functional,
+              adapting to any new requirements or changes.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-in py-4 text-center">
+    <div class="container">
+      <h3 class="fs-4 my-3 text-white">Recognized by top creative platforms</h3>
+      <a
+        href="https://www.designrush.com/agency/creative-agencies"
+        target="_blank"
+      >
+        <img
+          src="assets/img/template/Verfifed%20Agency%20Round%20v1.png"
+          alt="DesignRush"
+          width="130"
+        />
+      </a>
+    </div>
+  </section>
+
+  <footer class="pt-5" itemscope itemtype="https://schema.org/Organization">
+    <section class="footer-cta py-5 border-bottom position-relative">
+      <div class="p-4 p-xs-5">
+        <h2 class="text-center w-100 mb-0 text-white">
+          Ready to <span>transform</span> your brand?
+        </h2>
+        <p class="mb-0 display-8 text-center w-100 text-white py-3">
+          Get started today and elevate your business with our expert web design
+          services.<br />
+          Contact us to discuss your project and discover how our web designer can
+          help bring your vision to life.
+        </p>
+        <div class="d-grid gap-0 gap-3 justify-content-sm-center py-4">
+          <a
+            href="#"
+            title="Book call on my calendar"
+            class="btn btn-primary btn-lg ps-4 pe-4 py-2 my-2 d-flex"
+            itemprop="url"
+            >Book a call
+            <svg
+              class="ms-1"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 18 18"
+              style="width: 18px"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #cfe2ff;
+                }
+                .st1 {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  fill: #448ffe;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"
+                ></path>
+                <path
+                  class="st1"
+                  d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+             c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-5 footer-links">
+      <div class="container">
+        <p class="text-white text-center mb-3">
+          ThinkAiStudio is a European design studio specializing in UX/UI
+          design, branding, and web development.<br />
+          Since 2009, we've empowered startups and small businesses with impactful,
+          user-focused designs. Let us bring your vision to life.
+        </p>
+      </div>
+      <div class="d-flex justify-content-center w-100">
+        <p class="text-white mb-0 p-2 muted-50">
+          <img
+            loading="lazy"
+            class="pe-3"
+            alt="footer logo"
+            width="45"
+            src="assets/img/template/logo.svg"
+          />© Copyright 2024 <span itemprop="name">ThinkAiStudio</span>.
+          <span>Designed By </span><a>Nitish Kumar Rikhi</a>.
+          <span>Developed By </span><a>Jaspreet Singh</a>.
+          <span>Hosted with ❤️ by Github</span>.
+        </p>
+      </div>
+      <ul
+        class="nav col-md-4 justify-content-center w-100 container"
+        itemscope
+        itemtype="https://schema.org/SiteNavigationElement"
+      >
+        <li class="nav-item">
+          <a
+            title="Linkedin profile"
+            href="https://www.linkedin.com/company/uiforge"
+            class="nav-link px-2 text-body-secondary text-white muted-50"
+            itemprop="url">Linkedin</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            title="Instagram profile"
+            href="https://www.instagram.com/uiforge.design"
+            class="nav-link px-2 text-body-secondary text-white muted-50"
+            itemprop="url">Instagram</a
+          >
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <CookieBanner />
 </Layout>

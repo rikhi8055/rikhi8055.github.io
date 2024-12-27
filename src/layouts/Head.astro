@@ -1,12 +1,25 @@
 ---
-const { title, description, ...props } = Astro.props;
+import 'src/styles/main.css';
+
+const { title, description } = Astro.props;
 ---
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   <meta name="description" content={description} />
+
+  <script
+    defer
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/assets/js/animated.js"></script>
+  <!-- <script defer src="assets/js/cookies.js"></script> -->
 </head>

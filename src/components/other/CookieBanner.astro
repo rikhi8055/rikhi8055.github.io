@@ -1,0 +1,66 @@
+---
+const isCookiesRequired = false;
+---
+
+{isCookiesRequired && <div id="cookieConsent" class="p-4 cookie-banner">
+    <p class="mb-2"><b>This website uses cookies</b></p>
+    <p>
+      We use cookies to improve your experience. <br />By using our site, you
+      agree to our
+      <a href="https://www.uiforge.design/cookie-policy.html">cookie policy</a>.
+    </p>
+    <button
+      id="acceptCookies"
+      class="btn btn-primary btn-lg ps-4 pe-4 py-2 d-flex me-0 me-md-3"
+    >
+      Accept all
+    </button>
+    <button
+      id="rejectCookies"
+      class="btn btn btn-secondary btn-lg ps-4 pe-4 py-2 d-flex"
+    >
+      Decline
+    </button>
+</div>}
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cookieConsent = document.getElementById('cookieConsent');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const rejectCookies = document.getElementById('rejectCookies');
+
+        if (!cookieConsent || !acceptCookies || !rejectCookies) {
+            return;
+        }
+        
+        // Show the banner if no consent is stored
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieConsent.style.display = 'block';
+        }
+
+        // Handle acceptance
+        acceptCookies.addEventListener('click', function () {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.display = 'none';
+            enableCookies(); // Define your function to enable cookies
+        });
+
+        // Handle rejection
+        rejectCookies.addEventListener('click', function () {
+            localStorage.setItem('cookiesAccepted', 'false');
+            cookieConsent.style.display = 'none';
+            disableCookies(); // Define your function to disable cookies
+        });
+    });
+
+    function enableCookies() {
+        // Code to enable cookies or analytics
+        console.log("Cookies enabled.");
+    }
+
+    function disableCookies() {
+        // Code to disable cookies or analytics
+        console.log("Cookies disabled.");
+    }
+</script>

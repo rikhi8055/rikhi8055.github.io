@@ -1,11 +1,10 @@
 ---
 import Head from "src/layouts/Head.astro";
-const { ...props } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head />
+  <Head {...Astro.props} />
   <body>
     <slot />
   </body>

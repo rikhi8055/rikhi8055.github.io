@@ -1,1 +1,5 @@
 /* Custom Styles */
+@import url(./bootstrap.min.css);
+@import url(./afonts.css);
+@import url(./base.css);
+@import url(./custom-styles.css);

@@ -1,0 +1,122 @@
+<a
+  title="Get your free design audit"
+  class="btn btn-secondary btn-lg ps-4 pe-4 py-2 my-2 d-flex"
+  itemprop="url"
+  data-bs-toggle="modal"
+  data-bs-target="#auditFormModal"
+>
+  Free design audit
+</a>
+<div
+  class="modal fade bd-example-modal-lg"
+  id="auditFormModal"
+  tabindex="-1"
+  aria-labelledby="auditFormModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="auditFormModalLabel">
+          Request a free design audit
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="notification" class="alert" role="alert"></div>
+
+        <form id="auditForm-design-audit" class="needs-validation" novalidate>
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+              <img
+                class="w-100"
+                alt="placeholder image to show how the audit will look like"
+                src="assets/img/template/img-audit.webp"
+              />
+            </div>
+            <div class="col">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="namea"
+                    name="name"
+                    placeholder="e.g. John Doe"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="company" class="form-label">Company Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companya"
+                    name="company"
+                    placeholder="e.g. Acme Corporation"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your company name.
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="email" class="form-label">Work Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emaila"
+                    name="email"
+                    placeholder="e.g. john.doe@company.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="website" class="form-label">Website</label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    id="websitea"
+                    name="website"
+                    placeholder="e.g. https://www.company.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid website URL.
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="message" class="form-label"
+                    >Additional Message (optional)</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="messagea"
+                    name="message"
+                    rows="3"
+                    placeholder="Share any additional details or requests"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <button type="submit" class="btn btn-primary w-100">
+                  Send Request
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-import SampleModal from "src/components/modals/SampleModal.astro";
+import SocialModal from "src/components/modals/SocialModal.astro";
 import CookieBanner from "src/components/other/CookieBanner.astro";
 import Layout from "src/layouts/Layout.astro";
 
@@ -24,8 +24,8 @@ const description =
     >
       <div class="container">
         <a
-          title="main logo"
-          href="index.html"
+          title="ThinkAiStudio.com"
+          href="/"
           class="navbar-brand"
           itemprop="url"
         >
@@ -51,114 +51,35 @@ const description =
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <menu class="navbar-nav me-auto mt-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="index.html#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <ul class="dropdown-menu pb-0" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/ux-ui-design-services.html"
-                    itemprop="url">UX/UI design</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/custom-web-design-development.html"
-                    itemprop="url">Web design and development</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/branding-and-visual-identity.html"
-                    itemprop="url">Branding & identity</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/mobile-app-design.html"
-                    itemprop="url">Mobile design</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/no-code-web-development.html"
-                    itemprop="url">No code web development</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/motion-design-animation.html"
-                    itemprop="url">Motion design</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/illustrations.html"
-                    itemprop="url">Illustrations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services/iconography-icon-design.html"
-                    itemprop="url">Icons</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    title="Services nav link"
-                    class="dropdown-item"
-                    href="https://www.uiforge.design/services.html"
-                    itemprop="url">All services</a
-                  >
-                </li>
-              </ul>
-            </li>
             <li>
               <a
-                title="Case Studies nav link"
+                title="Services"
                 class="nav-link"
-                href="index.html#case-studies"
-                itemprop="url">Case Studies</a
+                href="#services"
+                itemprop="url">Services</a
               >
             </li>
             <li>
               <a
-                title="Pricing nav link"
+                title="Case Studies"
                 class="nav-link"
-                href="https://www.uiforge.design/pricing.html"
-                itemprop="url">Pricing</a
+                href="#recent-works"
+                itemprop="url">Work</a
               >
             </li>
             <li>
               <a
-                title="About nav link"
+                title="Testimonials"
                 class="nav-link"
-                href="https://www.uiforge.design/about.html"
+                href="#testimonials"
+                itemprop="url">Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                title="About the founder"
+                class="nav-link"
+                href="#about-me"
                 itemprop="url">About</a
               >
             </li>
@@ -188,14 +109,16 @@ const description =
                     stroke-width="2"></path>
                 </svg>
               </div>
-              <span>Available for work</span>
+              <span class="ms-2">Available for work</span>
             </div>
             <a
-              href="https://www.uiforge.design/book-a-call.html"
-              title="Lets talk button"
+              data-bs-toggle="modal"
+              data-bs-target="#auditFormModal"
+              title="Lets talk"
               class="btn btn-primary btn-sm px-3 py-1 flex-fill bd-highlight d-none d-md-flex"
               itemprop="url"
-              >Book a call
+            >
+              Let's Connect
               <svg
                 class="ms-1"
                 version="1.1"
@@ -242,7 +165,7 @@ const description =
     itemtype="https://schema.org/WebPageElement"
   >
     <div class="header-hero text-center px-4">
-      <!-- <p class="accent-text" itemprop="description">Welcome to Welcome to ThinkAiStudio</p> -->
+      <!-- <p class="accent-text" itemprop="description">Welcome to ThinkAiStudio</p> -->
       <p
         class="accent-text text-center mb-0 mt-5 mt-md-0"
         itemprop="description"
@@ -258,53 +181,6 @@ const description =
           projects faster.<br />
           Enjoy full-time dedication without the cost of onboarding
         </p>
-        <div
-          class="d-grid d-sm-flex justify-content-sm-center mb-5 pb-0 pb-md-5"
-        >
-          <a
-            href="https://www.uiforge.design/book-a-call.html"
-            title="Book call on my calendar"
-            class="btn btn-primary btn-lg ps-4 pe-4 py-2 my-2 d-flex me-0 me-md-3"
-            itemprop="url"
-            >Free consultation
-            <svg
-              class="ms-1"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 18 18"
-              style="width: 18px"
-              xml:space="preserve"
-            >
-              <style type="text/css">
-                .st0 {
-                  fill: #cfe2ff;
-                }
-                .st1 {
-                  fill-rule: evenodd;
-                  clip-rule: evenodd;
-                  fill: #448ffe;
-                }
-              </style>
-              <g>
-                <path
-                  class="st0"
-                  d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"
-                ></path>
-                <path
-                  class="st1"
-                  d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
-                         c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"
-                ></path>
-              </g>
-            </svg>
-          </a>
-          <div class="d-none d-md-block">
-            <SampleModal />
-          </div>
-        </div>
 
         <div class="container-lg pb-5 mb-5 d-block d-md-none">
           <div class="row row-cols-1 row-cols-lg-3 g-4">
@@ -1020,6 +896,7 @@ const description =
     class="intro d-none d-md-block container-lg pb-2 pt-5 position-relative border-sm-0"
     itemscope
     itemtype="http://schema.org/Service"
+    id="services"
   >
     <h2 class="text-center w-100 mb-2" itemprop="name">
       How can we support you
@@ -1243,14 +1120,14 @@ const description =
   </section>
 
   <section
-    id="projects"
+    id="recent-works"
     class="latest-projects position-relative"
     itemscope
     itemtype="http://schema.org/CreativeWork"
   >
     <div class="container-lg pb-3 pt-5 py-5 w-60">
       <p class="accent-text text-center mb-0" itemprop="description">
-        Recent designs
+        Recent Works
       </p>
       <h2 class="text-center w-100 mb-5" itemprop="headline">
         Partnering for success
@@ -2029,396 +1906,103 @@ const description =
     </div>
   </section>
 
-  <section
-    id="case-studies"
-    class="case-studies pt-5"
-    itemscope
-    itemtype="http://schema.org/CollectionPage"
-  >
-    <div class="container py-5 pb-2 pt-4 w-60">
-      <h2 class="text-center w-100 mb-2" itemprop="headline">Case studies</h2>
-      <p class="mb-5 display-8 text-center w-100" itemprop="description">
-        Explore our successful projects and see the impactful results we've
-        delivered for our clients.
-      </p>
-      <div class="row row-cols-1 row-cols-lg-2 g-4 pb-4 animated">
-        <a
-          title="Vib cloud link"
-          href="https://www.uiforge.design/case-studies/vib-cloud.html"
-          itemscope
-          itemtype="http://schema.org/CaseStudy"
-          itemprop="hasPart"
-        >
-          <div class="col">
-            <div class="card card-animation h-100 p-2 pb-0">
-              <img
-                loading="lazy"
-                class="radius-10"
-                src="assets/img/portfolio/vibcloud/img-cover.webp"
-                alt="Vib Cloud app case study cover image showcasing vibration data collection and analysis platform"
-                itemprop="image"
-              />
-              <div class="card-body px-2 d-flex">
-                <p class="card-text mb-0 me-auto" itemprop="name">Vib Cloud</p>
-                <p class="card-text mb-0">Read study ➞</p>
-                <meta itemprop="about" content="SAS Application" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a
-          title="Go green ai tagging"
-          href="https://www.uiforge.design/services.html"
-          itemscope
-          itemtype="http://schema.org/CaseStudy"
-          itemprop="hasPart"
-        >
-          <div class="col">
-            <div class="card card-animation h-100 p-2 pb-0">
-              <img
-                loading="lazy"
-                class="radius-10"
-                src="assets/img/portfolio/img-slide-greenride.webp"
-                alt="Green Ride electric vehicle rental app case study cover image showcasing modern app design"
-                itemprop="image"
-              />
-              <div class="card-body px-2 d-flex">
-                <p class="card-text mb-0 me-auto" itemprop="name">
-                  Coming soon
-                </p>
-                <p class="card-text mb-0">Mobile app design</p>
-                <meta itemprop="about" content="SAS Application" />
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section
-    id="faq"
-    class="faq round-bottom-20 py-2 py-xs-5 position-relative"
-    itemscope
-    itemtype="http://schema.org/FAQPage"
-  >
-    <div class="text-left px-3 pt-5 container w-60">
-      <h2 class="pt-2 mb-0 text" itemprop="headline">
-        Frequently asked questions
-      </h2>
-    </div>
-
-    <div
-      id="accordionFlushExample"
-      class="accordion accordion-flush p-3 container w-60"
-    >
-      <!-- Question 1 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingOne">
-          <button
-            class="accordion-button collapsed fs-5 p-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne"
-            aria-expanded="false"
-            aria-controls="flush-collapseOne"
-          >
-            <span itemprop="name"
-              >Q: What design package is best for my needs?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseOne"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingOne"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >Our packages are tailored to fit various needs. Whether you
-              require a complete branding overhaul, a new website, or continuous
-              design support, we can recommend the best package based on your
-              goals and budget. Contact us for a personalized consultation.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 2 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingTwo">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo"
-            aria-expanded="false"
-            aria-controls="flush-collapseTwo"
-          >
-            <span itemprop="name"
-              >Q: How much work will I receive in a single month?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingTwo"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >The amount of work depends on the package you choose. We offer
-              flexible plans that cater to different project scopes and
-              timelines, ensuring you get the quality and quantity of work
-              needed to achieve your objectives.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 3 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingThree">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree"
-            aria-expanded="false"
-            aria-controls="flush-collapseThree"
-          >
-            <span itemprop="name"
-              >Q: Can I hire UI Forge to design for my agency?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseThree"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingThree"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >Yes, we collaborate with agencies to provide top-notch design
-              services. Whether you need extra hands on a specific project or
-              ongoing design support, we can seamlessly integrate with your team
-              to deliver outstanding results.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 4 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingFour">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFour"
-            aria-expanded="false"
-            aria-controls="flush-collapseFour"
-          >
-            <span itemprop="name"
-              >Q: How do I get started with UI Forge's design services?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseFour"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingFour"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >Getting started is easy! Simply reach out via our contact form,
-              email, or phone. We’ll discuss your needs, outline our process,
-              and provide a tailored proposal to kick off your project.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 5 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingFive">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseFive"
-            aria-expanded="false"
-            aria-controls="flush-collapseFive"
-          >
-            <span itemprop="name"
-              >Q: Why choose a subscription model over hiring a full-time
-              designer?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseFive"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingFive"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >Our subscription model offers flexibility, cost savings, and
-              access to a diverse team of experts. You get high-quality design
-              work without the overhead costs of hiring full-time staff, along
-              with the ability to scale services up or down as needed.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 6 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingSix">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseSix"
-            aria-expanded="false"
-            aria-controls="flush-collapseSix"
-          >
-            <span itemprop="name"
-              >Q: What industries does UI Forge typically work with?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseSix"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingSix"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >While we excel in various industries, we have significant
-              experience in ecommerce, tech startups, and B2B services,
-              providing tailored solutions that meet specific industry needs.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Question 7 -->
-      <div
-        class="accordion-item rounded-20 white my-3 p-3 animated"
-        itemscope
-        itemprop="mainEntity"
-        itemtype="http://schema.org/Question"
-      >
-        <h3 class="accordion-header" id="flush-headingSeven">
-          <button
-            class="accordion-button collapsed fs-5 px-0 py-2"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseSeven"
-            aria-expanded="false"
-            aria-controls="flush-collapseSeven"
-          >
-            <span itemprop="name"
-              >Q: Do you offer ongoing support after project completion?</span
-            >
-          </button>
-        </h3>
-        <div
-          id="flush-collapseSeven"
-          class="accordion-collapse collapse"
-          aria-labelledby="flush-headingSeven"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div
-            class="accordion-body rounded-6"
-            itemprop="acceptedAnswer"
-            itemscope
-            itemtype="http://schema.org/Answer"
-          >
-            <span itemprop="text"
-              >Yes, we offer ongoing support and maintenance to ensure your
-              digital products remain up-to-date, secure, and fully functional,
-              adapting to any new requirements or changes.</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="featured-in py-4 text-center">
+  <section class="featured-in py-5 text-center">
     <div class="container">
-      <h3 class="fs-4 my-3 text-white">Recognized by top creative platforms</h3>
-      <a
-        href="https://www.designrush.com/agency/creative-agencies"
-        target="_blank"
+      <section
+        id="aboutMe"
+        class="about-me mt-5 text-start"
+        itemscope=""
+        itemtype="http://schema.org/Person"
       >
-        <img
-          src="assets/img/template/Verfifed%20Agency%20Round%20v1.png"
-          alt="DesignRush"
-          width="130"
-        />
-      </a>
+        <div class="about-me container card-style p-4 animated visible">
+          <div class="row align-items-start">
+            <div class="col-12 col-md-4">
+              <img
+                loading="lazy"
+                class="w-100 p-0 rounded-10"
+                src="https://www.uiforge.design/assets/img/template/me.webp"
+                alt="Nitish Rikhi - UX/UI Designer and Founder of ThinkAiStudio"
+                itemprop="image"
+              />
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="row align-items-center">
+                <div class="col d-flex flex-column">
+                  <span class="accent-text mb-0" itemprop="jobTitle"
+                    >About the Founder</span
+                  >
+                  <h2 class="py-2 fs-1" itemprop="name">Hi there 🖖</h2>
+                </div>
+                <div class="col-auto">
+                  <a
+                    class="me-1"
+                    title="Web portfolio of Dejan Veljanoski"
+                    target="_blank"
+                    href="https://veljanoski.com/"
+                    ><img
+                      width="32"
+                      height="32"
+                      src="assets/img/template/ic-veljanoski.svg"
+                      alt="Portfolio veljanoski.com Logo"
+                    /></a
+                  >
+                  <a
+                    title="Personal linkedin profile of Dejan Veljanoski"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/dejan-veljanoski/"
+                    ><img
+                      width="32"
+                      height="32"
+                      src="assets/img/template/ic-linkedin.svg"
+                      alt="LinkedIn Icon"
+                    /></a
+                  >
+                </div>
+              </div>
+              <p class="pb-2" itemprop="description">
+                I'm Dejan, a passionate product designer with a unique blend of
+                computer science and graphic engineering education. With over <b
+                  >15 years</b
+                > in the industry, I've immersed myself in the world of design, continually
+                honing my skills through a multitude of courses and real-world projects.
+              </p>
+              <p class="mb-0" itemprop="description">
+                My approach to design is rooted in empathy and user-centricity,
+                always striving to create intuitive and <b
+                  >delightful experiences</b
+                > for end-users.
+              </p>
+              <div class="d-flex align-items-center gap-2 mt-4">
+                <h4 class="fs-3 m-0">Google Verified</h4>
+                <svg
+                  height="30"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Layer_2" data-name="Layer 2">
+                    <path
+                      d="m21.187 10.007a3.457 3.457 0 0 1 -.864-.712 3.378 3.378 0 0 1 .277-1.141c.291-.821.62-1.751.092-2.474s-1.525-.7-2.4-.68a3.422 3.422 0 0 1 -1.155-.078 3.369 3.369 0 0 1 -.425-1.063c-.248-.845-.531-1.8-1.4-2.086-.838-.27-1.614.324-2.3.846a3.285 3.285 0 0 1 -1.012.631 3.285 3.285 0 0 1 -1.023-.631c-.684-.519-1.457-1.119-2.299-.845-.867.282-1.15 1.24-1.4 2.085a3.418 3.418 0 0 1 -.421 1.061 3.482 3.482 0 0 1 -1.157.08c-.878-.024-1.867-.05-2.4.68s-.2 1.653.092 2.473a3.336 3.336 0 0 1 .281 1.141 3.449 3.449 0 0 1 -.863.713c-.732.5-1.563 1.069-1.563 1.993s.831 1.491 1.563 1.993a3.449 3.449 0 0 1 .863.712 3.335 3.335 0 0 1 -.273 1.142c-.29.82-.618 1.75-.091 2.473s1.521.7 2.4.68a3.426 3.426 0 0 1 1.156.078 3.4 3.4 0 0 1 .424 1.063c.248.845.531 1.8 1.4 2.086a1.424 1.424 0 0 0 .431.068 3.382 3.382 0 0 0 1.868-.914 3.285 3.285 0 0 1 1.012-.631 3.285 3.285 0 0 1 1.023.631c.685.523 1.461 1.12 2.3.845.867-.282 1.15-1.24 1.4-2.084a3.388 3.388 0 0 1 .424-1.062 3.425 3.425 0 0 1 1.153-.08c.878.021 1.867.05 2.4-.68s.2-1.653-.092-2.474a3.38 3.38 0 0 1 -.281-1.139 3.436 3.436 0 0 1 .864-.713c.732-.5 1.563-1.07 1.563-1.994s-.834-1.492-1.567-1.993z"
+                      fill="#49adf4"></path>
+                    <path
+                      d="m11 14.75a.745.745 0 0 1 -.53-.22l-2-2a.75.75 0 0 1 1.06-1.06l1.54 1.54 3.48-2.61a.75.75 0 0 1 .9 1.2l-4 3a.751.751 0 0 1 -.45.15z"
+                      fill="#fff"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-2">
+                <div class="certificate-badge">
+                  <img src="assets/img/certificate-badges/gcc-ai.webp" alt="GCC Ai badge" />
+                </div>
+                <div class="certificate-badge">
+                  <img src="assets/img/certificate-badges/gcc-ux.webp" alt="GCC UX badge" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -2528,4 +2112,5 @@ const description =
   </footer>
 
   <CookieBanner />
+  <SocialModal />
 </Layout>

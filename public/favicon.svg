@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="84.201" height="86.408" viewBox="0 0 84.201 86.408">
-  <g id="favicon" transform="translate(0)">
-    <path id="Path_2" data-name="Path 2" d="M54.443,22.546a22.5,....911,18.9,39.6,7.859,54.443,22.546" transform="translate(0 0)"/>
-    <rect id="Rectangle_4" data-name="Rectangle 4" width="26.883... rx="3.36" transform="translate(26.029 79.687)" fill="#0190fe"/>
+  <g id="favicon">
+    <path d="M54.443,22.546a22.5,22.5..." fill="black"/>
+    <rect width="26.883" height="6.721" rx="3.36" transform="translate(26.029 79.687)" fill="#0190fe"/>
   </g>
 </svg>

@@ -90,6 +90,9 @@ p {
 .text-white {
   color: #e0e0ed !important;
 }
+.text-purewhite {
+  color: white !important;
+}
 .text-dark {
   color: #000e23 !important;
 }
@@ -154,6 +157,9 @@ h2 span {
 a {
   text-decoration: none;
   line-height: 27px !important;
+}
+a:hover {
+  text-decoration: underline;
 }
 .border-bottom {
   border-bottom: 1px solid #333e4f !important;

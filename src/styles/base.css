@@ -307,24 +307,11 @@ nav {
   border: 1px solid #438fff;
   color: #438fff;
 }
-.btn-feature {
-  border: 1px solid #ff2119;
-  background: #ff2119;
-  background: linear-gradient(180deg, #fb605a 0, #ff2119 100%);
-  color: white;
-  text-decoration: none;
-}
-.btn-feature:hover {
-  color: white;
-  text-decoration: none;
-}
 .btn-feature-link {
-  color: #ff2119;
-  text-decoration: underline;
+  color: #000e23;
 }
 .btn-feature-link:hover {
-  color: #950500;
-  text-decoration: underline;
+  color: #000e23;
 }
 .year-founded:after,
 h2 span:after {
